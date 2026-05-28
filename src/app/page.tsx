@@ -158,7 +158,7 @@ export default function Home() {
               className="ax-display mt-4 text-[42px] md:text-[56px] lg:text-[68px]"
               style={{ textWrap: "balance" }}
             >
-              Build your <span className="ax-mark">global capability center</span> with India&apos;s best talent.
+              Build your <span className="ax-mark">global capability center </span> with India&apos;s best talent.
             </h1>
             <p className="mt-6 max-w-[540px] text-[17px] leading-[1.65] text-fg-1 md:text-[18px]">
               Axiominds is your strategic partner for hiring, scaling, and
