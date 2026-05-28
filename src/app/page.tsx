@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { Logo } from "@/components/Logo";
-import { Orbit } from "@/components/Orbit";
+import { Globe } from "@/components/Globe";
 import {
   ArrowRight,
   Award,
   Briefcase,
   Cpu,
-  Globe,
+  Globe as GlobeIcon,
   Linkedin,
   Mail,
   MapPin,
@@ -54,7 +54,7 @@ const SERVICES = [
 
 const WHY_FEATURES = [
   {
-    Icon: Globe,
+    Icon: GlobeIcon,
     title: "India as a strategic destination",
     body: "Access to a deep talent pool of engineers, AI experts, and product leaders who can build viable global IP.",
   },
@@ -196,7 +196,7 @@ export default function Home() {
           </div>
 
           <div className="relative">
-            <Orbit />
+            <Globe />
           </div>
         </div>
       </section>
