@@ -1,26 +1,164 @@
 @import "tailwindcss";
 
+/* ============================================================
+   AXIOMINDS — design tokens
+   Warm earthy palette. Spruce primary + saffron accent on cream.
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Spruce (primary teal) */
+  --ax-spruce-900: #0a3a3f;
+  --ax-spruce-800: #0d4a52;
+  --ax-spruce-700: #155e67;
+  --ax-spruce-600: #2a7780;
+  --ax-spruce-500: #4a949c;
+  --ax-spruce-300: #9bc1c5;
+  --ax-spruce-100: #d6e6e7;
+  --ax-spruce-50: #eaf1f1;
+
+  /* Saffron (warm amber accent) */
+  --ax-saffron-700: #c47339;
+  --ax-saffron-600: #d88a47;
+  --ax-saffron-500: #e8a777;
+  --ax-saffron-400: #f0bb91;
+  --ax-saffron-300: #f5cba9;
+  --ax-saffron-100: #faead9;
+  --ax-saffron-50: #fdf5ec;
+
+  /* Earth supports */
+  --ax-terracotta: #c8704d;
+  --ax-clay: #b5856f;
+  --ax-sand: #d9c5a7;
+  --ax-moss: #6b7a4a;
+  --ax-ink: #2a221b;
+
+  /* Paper neutrals */
+  --ax-paper: #faf5ec;
+  --ax-paper-2: #f3ecde;
+  --ax-paper-3: #ece2d0;
+  --ax-paper-line: #e3d6bf;
+  --ax-border-strong: #c9b89a;
+
+  /* Semantic */
+  --ax-fg: var(--ax-ink);
+  --ax-fg-1: #4a3f33;
+  --ax-fg-2: #7a6b58;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--ax-paper);
+  --color-paper-2: var(--ax-paper-2);
+  --color-paper-3: var(--ax-paper-3);
+  --color-paper-line: var(--ax-paper-line);
+  --color-ink: var(--ax-ink);
+  --color-fg-1: var(--ax-fg-1);
+  --color-fg-2: var(--ax-fg-2);
+  --color-spruce-900: var(--ax-spruce-900);
+  --color-spruce-800: var(--ax-spruce-800);
+  --color-spruce-700: var(--ax-spruce-700);
+  --color-spruce-600: var(--ax-spruce-600);
+  --color-spruce-100: var(--ax-spruce-100);
+  --color-saffron-700: var(--ax-saffron-700);
+  --color-saffron-600: var(--ax-saffron-600);
+  --color-saffron-500: var(--ax-saffron-500);
+  --color-saffron-400: var(--ax-saffron-400);
+  --color-saffron-100: var(--ax-saffron-100);
+  --color-saffron-50: var(--ax-saffron-50);
+  --color-terracotta: var(--ax-terracotta);
+  --color-clay: var(--ax-clay);
+  --color-sand: var(--ax-sand);
+  --color-moss: var(--ax-moss);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  background: var(--ax-paper);
+  color: var(--ax-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* ─── Design system utilities (mirrors .ax-* from the system) ─── */
+.ax-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: var(--ax-ink);
+}
+.ax-mark {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--ax-saffron-700);
+}
+.ax-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ax-saffron-700);
+}
+
+/* ─── Sticky cream-translucent nav ─── */
+.ax-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 245, 236, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ax-paper-line);
+}
+
+/* ─── Orbit hero visual animations ─── */
+@keyframes ax-spin {
+  to {
+    transform: rotate(360deg);
   }
 }
+.ax-orbit-1 {
+  animation: ax-spin 60s linear infinite;
+}
+.ax-orbit-2 {
+  animation: ax-spin 90s linear infinite reverse;
+}
+.ax-orbit-3 {
+  animation: ax-spin 40s linear infinite;
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Client ticker marquee ─── */
+@keyframes ax-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ax-marquee-track {
+  animation: ax-marquee 40s linear infinite;
+}
+
+/* ─── Card hover lift ─── */
+.ax-lift {
+  transition:
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ax-lift:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 16px rgba(42, 34, 27, 0.08),
+    0 2px 4px rgba(42, 34, 27, 0.05);
+}
+
+/* ─── Focus ring (saffron halo) ─── */
+.ax-focusable:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 6px rgba(232, 167, 119, 0.28);
 }
