@@ -27,7 +27,7 @@ export function Orbit() {
         className="ax-orbit-2 absolute rounded-full"
         style={{
           inset: "4%",
-          border: "1px solid rgba(13,74,82,0.12)",
+          border: "1px solid rgba(10,61,68,0.12)",
           opacity: 0.5,
         }}
       />
@@ -54,7 +54,7 @@ export function Orbit() {
         style={{
           background: "var(--ax-spruce-800)",
           boxShadow:
-            "0 24px 60px rgba(13,74,82,0.25), 0 0 0 12px rgba(13,74,82,0.05)",
+            "0 24px 60px rgba(10,61,68,0.28), 0 0 0 12px rgba(10,61,68,0.05)",
         }}
       >
         <div
@@ -93,7 +93,7 @@ export function Orbit() {
             fontSize: 11,
             fontWeight: 600,
             letterSpacing: "0.08em",
-            boxShadow: "0 2px 6px rgba(42,34,27,0.06), 0 1px 2px rgba(42,34,27,0.04)",
+            boxShadow: "0 2px 6px rgba(29,22,18,0.06), 0 1px 2px rgba(29,22,18,0.04)",
           }}
         >
           {n.label}

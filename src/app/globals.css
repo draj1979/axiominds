@@ -5,43 +5,43 @@
    Warm earthy palette. Spruce primary + saffron accent on cream.
    ============================================================ */
 :root {
-  /* Spruce (primary teal) */
-  --ax-spruce-900: #0a3a3f;
-  --ax-spruce-800: #0d4a52;
-  --ax-spruce-700: #155e67;
-  --ax-spruce-600: #2a7780;
-  --ax-spruce-500: #4a949c;
-  --ax-spruce-300: #9bc1c5;
-  --ax-spruce-100: #d6e6e7;
-  --ax-spruce-50: #eaf1f1;
+  /* Spruce (primary — deeper jewel teal) */
+  --ax-spruce-900: #062f34;
+  --ax-spruce-800: #0a3d44;
+  --ax-spruce-700: #11525a;
+  --ax-spruce-600: #246870;
+  --ax-spruce-500: #4a868c;
+  --ax-spruce-300: #92b2b6;
+  --ax-spruce-100: #c8dadc;
+  --ax-spruce-50: #e1ecee;
 
-  /* Saffron (warm amber accent) */
-  --ax-saffron-700: #c47339;
-  --ax-saffron-600: #d88a47;
-  --ax-saffron-500: #e8a777;
-  --ax-saffron-400: #f0bb91;
-  --ax-saffron-300: #f5cba9;
-  --ax-saffron-100: #faead9;
-  --ax-saffron-50: #fdf5ec;
+  /* Saffron (accent — richer terracotta-amber) */
+  --ax-saffron-700: #b5612a;
+  --ax-saffron-600: #c87a3a;
+  --ax-saffron-500: #d99268;
+  --ax-saffron-400: #e3a987;
+  --ax-saffron-300: #ecbda0;
+  --ax-saffron-100: #f3decb;
+  --ax-saffron-50: #faf0e3;
 
   /* Earth supports */
-  --ax-terracotta: #c8704d;
-  --ax-clay: #b5856f;
-  --ax-sand: #d9c5a7;
-  --ax-moss: #6b7a4a;
-  --ax-ink: #2a221b;
+  --ax-terracotta: #b85a3a;
+  --ax-clay: #a87560;
+  --ax-sand: #cfba99;
+  --ax-moss: #5d6c3f;
+  --ax-ink: #1d1612;
 
-  /* Paper neutrals */
-  --ax-paper: #faf5ec;
-  --ax-paper-2: #f3ecde;
-  --ax-paper-3: #ece2d0;
-  --ax-paper-line: #e3d6bf;
-  --ax-border-strong: #c9b89a;
+  /* Paper neutrals (cooler stone) */
+  --ax-paper: #f5efe2;
+  --ax-paper-2: #ece4d1;
+  --ax-paper-3: #e0d4be;
+  --ax-paper-line: #d8caaf;
+  --ax-border-strong: #c3b08e;
 
   /* Semantic */
   --ax-fg: var(--ax-ink);
-  --ax-fg-1: #4a3f33;
-  --ax-fg-2: #7a6b58;
+  --ax-fg-1: #3a322a;
+  --ax-fg-2: #6b5e4d;
 }
 
 @theme inline {
@@ -108,7 +108,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 245, 236, 0.85);
+  background: rgba(245, 239, 226, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--ax-paper-line);
@@ -153,12 +153,12 @@ body {
 .ax-lift:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 6px 16px rgba(42, 34, 27, 0.08),
-    0 2px 4px rgba(42, 34, 27, 0.05);
+    0 6px 16px rgba(29, 22, 18, 0.08),
+    0 2px 4px rgba(29, 22, 18, 0.05);
 }
 
 /* ─── Focus ring (saffron halo) ─── */
 .ax-focusable:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 6px rgba(232, 167, 119, 0.28);
+  box-shadow: 0 0 0 6px rgba(217, 146, 104, 0.28);
 }

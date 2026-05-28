@@ -148,7 +148,7 @@ export default function Home() {
             width: "60%",
             height: "120%",
             background:
-              "radial-gradient(circle, rgba(232,167,119,0.18), transparent 60%)",
+              "radial-gradient(circle, rgba(217,146,104,0.20), transparent 60%)",
           }}
         />
         <div className="relative mx-auto grid max-w-[1240px] items-center gap-10 px-6 py-20 md:grid-cols-[1.1fr_1fr] md:gap-16 md:px-10 md:py-28">
@@ -318,7 +318,7 @@ export default function Home() {
             {/* Stats */}
             <div
               className="mt-9 flex flex-wrap gap-10 border-t pt-7"
-              style={{ borderColor: "rgba(250,245,236,0.18)" }}
+              style={{ borderColor: "rgba(245,239,226,0.18)" }}
             >
               {[
                 { num: "20", suf: "+", lbl: "Years leadership" },
@@ -361,10 +361,10 @@ export default function Home() {
             {WHY_FEATURES.map((f) => (
               <div
                 key={f.title}
-                className="flex gap-4 rounded-[20px] border p-6 transition-colors hover:border-[rgba(232,167,119,0.4)]"
+                className="flex gap-4 rounded-[20px] border p-6 transition-colors hover:border-[rgba(217,146,104,0.4)]"
                 style={{
-                  background: "rgba(250,245,236,0.05)",
-                  borderColor: "rgba(250,245,236,0.10)",
+                  background: "rgba(245,239,226,0.05)",
+                  borderColor: "rgba(245,239,226,0.10)",
                 }}
               >
                 <div
@@ -482,7 +482,7 @@ export default function Home() {
                 className="overflow-hidden rounded-[20px]"
                 style={{
                   border: "4px solid var(--ax-paper)",
-                  boxShadow: "0 18px 40px rgba(42,34,27,0.12), 0 6px 14px rgba(42,34,27,0.06)",
+                  boxShadow: "0 18px 40px rgba(29,22,18,0.12), 0 6px 14px rgba(29,22,18,0.06)",
                 }}
               >
                 <Image
@@ -498,7 +498,7 @@ export default function Home() {
                 style={{
                   background: "var(--ax-paper)",
                   color: "var(--ax-spruce-800)",
-                  boxShadow: "0 2px 6px rgba(42,34,27,0.06), 0 1px 2px rgba(42,34,27,0.04)",
+                  boxShadow: "0 2px 6px rgba(29,22,18,0.06), 0 1px 2px rgba(29,22,18,0.04)",
                 }}
               >
                 <MapPin size={14} />
@@ -556,7 +556,7 @@ export default function Home() {
           className="relative overflow-hidden rounded-[36px] px-8 py-16 text-center md:px-16 md:py-24"
           style={{
             background:
-              "radial-gradient(circle at 30% 20%, rgba(232,167,119,0.22) 0%, transparent 60%), var(--ax-spruce-800)",
+              "radial-gradient(circle at 30% 20%, rgba(217,146,104,0.24) 0%, transparent 60%), var(--ax-spruce-800)",
             color: "var(--ax-paper)",
           }}
         >
@@ -605,7 +605,7 @@ export default function Home() {
               href="mailto:hello@axiominds.com"
               className="inline-flex items-center gap-2 rounded-full border px-7 py-4 text-[15px] font-semibold transition-colors"
               style={{
-                borderColor: "rgba(250,245,236,0.4)",
+                borderColor: "rgba(245,239,226,0.4)",
                 color: "var(--ax-paper)",
               }}
             >
