@@ -27,15 +27,15 @@ export function LogoMark({ size = 36 }: { size?: number }) {
       aria-label="Axiominds"
       role="img"
     >
-      {/* Left peak — saffron "A" outline (hollow triangle) */}
+      {/* Left peak — spruce hollow triangle (larger, the "A") */}
       <path
         d="M 8 82 L 40 14 L 72 82 L 60 82 L 40 38 L 23 73 L 50 73 L 50 82 Z"
-        fill="var(--ax-saffron-500)"
+        fill="var(--ax-spruce-800)"
       />
-      {/* Right peak — spruce inverted-V outline */}
+      {/* Right peak — saffron hollow inverted-V (smaller, the "M" notch) */}
       <path
         d="M 56 82 L 78 24 L 92 82 L 83 82 L 78 64 L 65 82 Z"
-        fill="var(--ax-spruce-800)"
+        fill="var(--ax-saffron-500)"
       />
     </svg>
   );

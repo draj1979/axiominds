@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Logo } from "@/components/Logo";
-import { Orbit } from "@/components/Orbit";
+import { Logo, LogoMark } from "@/components/Logo";
 import {
   ArrowRight,
   Award,
@@ -195,8 +194,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative">
-            <Orbit />
+          <div className="relative flex items-center justify-center px-4 py-8 md:px-10 md:py-16">
+            <LogoMark size={360} />
           </div>
         </div>
       </section>
